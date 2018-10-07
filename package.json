@@ -1,0 +1,23 @@
+{
+  "name": "nodemailer",
+  "version": "1.0.0",
+  "description": "write email to receiver with attached file",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raniket/nodemailer.git"
+  },
+  "author": "Raniket Ram",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raniket/nodemailer/issues"
+  },
+  "homepage": "https://github.com/raniket/nodemailer#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
+  }
+}
