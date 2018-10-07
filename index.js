@@ -3,6 +3,7 @@ const app = express();
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 const fs = require('fs');
+const bodyParser = require('body-parser');
 
 if (process.env.NODE_ENV === 'test'); {
     dotenv.config();
@@ -10,7 +11,12 @@ if (process.env.NODE_ENV === 'test'); {
 
 const port = `${process.env.PORT}`;
 
+app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
+    console.log('request query string params -> ', req.query);
+    console.log('request headers:  -> ', req.headers);
+    console.log('request body: ->', req.body);
     
     var transporter = nodemailer.createTransport({
         service: `${process.env.EMAIL_SERVICE_PROVIDER}`,
