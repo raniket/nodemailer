@@ -1,0 +1,5 @@
+EMAIL_SERVICE_PROVIDER=emailServiceProvider
+SENDER_EMAIL=sender@mail.com
+SENDER_PASSWORD=serderpassword
+RECEIVER_EMAIL=receiver@mail.com
+PORT=8080

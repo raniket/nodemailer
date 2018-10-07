@@ -1,5 +1,5 @@
 {
-  "name": "nodemailer",
+  "name": "email-using-nodemailer",
   "version": "1.0.0",
   "description": "write email to receiver with attached file",
   "main": "index.js",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/raniket/nodemailer#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "nodemon": "^1.18.4"
   }
