@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     
     var transporter = nodemailer.createTransport({
         host: `${process.env.MAILTRAP_HOST}`,
-        port: 2525,
+        port: `${process.env.MAILTRAP_PORT}`,
         auth: {
             user: `${process.env.MAILTRAP_AUTH_USER}`,
             pass: `${process.env.MAILTRAP_AUTH_PASS}`
