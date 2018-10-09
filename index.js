@@ -19,10 +19,11 @@ app.get('/', (req, res) => {
     console.log('request body: ->', req.body);
     
     var transporter = nodemailer.createTransport({
-        service: `${process.env.EMAIL_SERVICE_PROVIDER}`,
+        host: `${process.env.MAILTRAP_HOST}`,
+        port: 2525,
         auth: {
-            user: `${process.env.SENDER_EMAIL}`,
-            pass: `${process.env.SENDER_PASSWORD}`
+            user: `${process.env.MAILTRAP_AUTH_USER}`,
+            pass: `${process.env.MAILTRAP_AUTH_PASS}`
         }
     });
 
@@ -39,8 +40,6 @@ app.get('/', (req, res) => {
         ]
     };
 
-    // got to this url 'https://myaccount.google.com/lesssecureapps' to chenge the following setting:
-    // Allow less secure apps: ON
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
             console.log(error);
